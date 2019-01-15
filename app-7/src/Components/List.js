@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
-import './App.css';
-
-import ToDo from './Components/ToDo'
 
 class App extends Component {
   render() {
+    let myList = this.props.array.map((element, index) => <h2 key={index+element}>{element}</h2>)
     return (
-      <div className="App">
-        <ToDo />
+      <div>
+          {myList}
       </div>
     );
   }
